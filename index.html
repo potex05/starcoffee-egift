@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Starcoffee eGift</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="brand"><img src="starcoffee-logo.png" alt="STARCOFFEEロゴ" class="brand-logo"></div>
+     <div class="ticket-background">
+      <div class="card">
+       <div class="ticket-top">
+        <div class="header">
+         <div class="value">FREE</div>
+          <div><h1>DRINK TICKET</h1></div>
+      </div>
+
+      <div class="drink-images">
+        <img src="https://img.icons8.com/ios/50/ffffff/coffee.png" alt="hot drink" />
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/coffee-to-go.png" alt="to-go" />
+        <img src="https://img.icons8.com/ios/50/ffffff/iced-coffee.png" alt="iced" />
+      </div>
+
+      <div class="ticket-header">
+        <h1>MOTHER'S DAY</h1>
+        <h1>eGift</h1>
+      </div>
+    </div>
+         
+      <ul class="ticket-cutline">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li><li></li>
+      </ul>
+
+      <div class="ticket-body">
+        <div class="body-text">
+          <p style="margin: 0px;">お好きなドリンク1杯(作れるもの限定)と交換できます。</p>
+          <p style="margin: 0px;"><span class="click-info" onclick="scrollToDetails()">詳細はこちら</span></p>
+
+          <div class="code-box" onclick="showModal()">メッセージを表示</div>
+          <p style="margin: 0px;"><strong>有効期限：<br>2026年5月10日(日)</strong></p>
+        </div>
+
+        <div class="qr-code">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://example.com&size=100x100" alt="QRコード">
+        </div>
+      </div>
+
+      <div class="footer">MOTHER'S DAY eGift</div>
+    </div>
+</div>
+       
+    <div class="ticket-info">
+      <details>
+        <summary style="margin-top: 10px;">チケット内容</summary>
+        <div class="content">
+          <strong>お好きなドリンク1杯(作れるもの限定)とお引き換えいただけます。</strong>
+          <ul>
+            <li>・1ドリンクにつき、ドリンクチケット1枚をご利用いただけます。</li>
+            <li>・作れないものはご容赦ください。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>ご利用条件</summary>
+        <div class="content">
+          <table class="ticket_table">
+            <tbody>
+              <tr><th>対象商品</th><td class="bb"><strong>ドリンク（作れるもの限定）</strong></td></tr>
+              <tr class="ticket-info_condition"><th>有効期限</th><td class="bb"><strong>2026年5月10日</strong></td></tr>
+              <tr><th>有効場所</th><td><p>自宅の台所</p></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+  <details>
+    <summary>ご利用方法</summary>
+  <div class="content">
+        <ul><li>①台所にてチケット画面を提示</li><li>②飲みたいドリンクを注文する</li><li>③お好きな商品をお楽しみください</li></ul></div>
+  </details>
+
+  <details>
+    <summary>ご利用上の注意</summary>
+  <div class="content">
+    <ul><li>・換金や払い戻しはできません。</li><li>・他のクーポンおよび値引きサービスとの併用はできません。</li><li>・チケットのご利用は1枚につき1日1回限りとなります。</li><li>・材料切れの際にはご容赦ください。</li></ul></div>
+  </details>
+<p class="contact-number">お問い合わせ番号:<br><strong>8801-2520-1105-2620-1005</strong></p>
+</div>
+</div>
+
+  <!-- モーダル -->
+  <div class="modal" id="codeModal">
+    <div class="modal-content">
+      <div class="code">お母さんいつもありがとう。これからもよろしくお願いします。</div>
+      <button class="close-btn" onclick="closeModal()">閉じる</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
