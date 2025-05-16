@@ -33,6 +33,13 @@
       height: auto;
     }
 
+    .sub-logo {
+      max-width: 150px;
+      height: auto;
+      z-index: 2;
+      margin-left: -10px;
+    }
+        
     .card {
       background-color: white;
       border-radius: 12px;
@@ -101,7 +108,7 @@
     }
 
     .ticket-header h1 {
-      font-size: 20px;
+      font-size: 24px;
       margin: 0;
       font-weight: bold;
       z-index: 2;
