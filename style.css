@@ -1,0 +1,357 @@
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      min-height: 90vh; /* 全画面高に対応 */
+    }
+    
+    html {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 400px; /* スマホに収まる幅（必要なら変更可） */
+      /* padding: 16px;  */
+      box-sizing: border-box;
+    }
+
+    .brand {
+      padding: 10px 200px 10px 0px;
+    }
+
+    .brand-logo {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 350px;
+      width: 100%; /* 固定幅をなくし、containerに合わせる */
+      max-width: 350px; /* 元の見た目は維持 */
+    }
+      .ticket-top {
+        position: relative;
+    }
+
+      .ticket-top::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 49px; /* 線の太さ */
+        height: 100%;
+        background-color: #417d91; /* 線の色（白などお好みに） */
+        z-index: 1;
+    }
+
+    .header {
+      background: #1e3932;
+      color: #fff;
+      padding: 0px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header .value {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+      text-align: right;
+    }
+
+    .value {
+      z-index: 2;
+    }
+
+    .drink-images {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px 0;
+      background-color: #1e3932;
+      user-select: none;
+    }
+
+    .ticket-header {
+      background-color: #1e3932;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 16px;
+      position: relative;
+    }
+
+    .ticket-header h1 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .ticket-header .icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .ticket-header .icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .ticket-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .ticket-background{
+      background: #f6f6f6;
+      padding: 10px 20px 20px 20px;
+    }
+
+    .body-text {
+      flex: 1;
+      margin-right: 12px;
+    }
+
+    .qr-code img {
+      width: 100px;
+      height: 100px;
+      padding: 0px 0px 0px 30px;
+    }
+
+    .line {
+      border-top: 1px dotted #ccc;
+      margin: 16px 0;
+    }
+
+    .code-box {
+      /* background-color: #eee;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold; */
+      color: #00754a;
+      text-align: right;
+      font-size: 12px;
+      margin-top: 21px;
+      margin-right: -143px;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .msg {
+      display: none;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #1e3932;
+    }
+
+    /* モーダル */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      width: 335px;
+      padding: 10px 0px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .modal-content .code {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1e3932;
+      /* background-color: #eee; */
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .close-btn {
+      background-color: #00754a;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: #144d40;
+    }
+
+    .click-info{
+      color: #00754a; 
+      cursor: pointer
+    }
+
+    .contact-number{
+      font-size: 12px;
+      padding-left: 5px;
+    }
+
+    .ticket-cutline {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0px;
+      margin-top: 4px;
+      margin-bottom: 0px;
+      margin-left: -4px;
+      margin-right: -4px;
+      list-style: none;
+      height: 10px;
+      background-color: white;
+    }
+
+    .ticket-cutline li {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #f6f6f6;
+      box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .ticket-info {
+      background-color: white;
+      margin-top: 10px;
+      width: 350px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .ticket-info_condition>td {
+      color: #417d91;
+      font-size: 18px;
+    }
+
+    .ticket-info details {
+      border-bottom: 1px solid #e2ddd7;
+    }
+
+    .ticket-info summary {
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      color: #1e3932;
+      margin-bottom: 2px;
+      padding: 10px 2px 10px 6px;
+    }
+    /* Chrome、Safari以外 */
+    summary {
+      display: block;
+    }
+
+    /* Chrome、Safari */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .ticket-info p {
+      margin: 0px
+    }
+
+    .ticket-info ul {
+      list-style: none;
+      padding: 0;
+      padding-left: 1em;
+      text-indent: -1em;
+    }
+
+    .ticket_table {
+      width: 100%;
+      background: #f6f6f6;
+      border-collapse: collapse;
+      color: #726c66;
+    }
+
+    .ticket_table th {
+      font-weight: normal;
+      padding: 10px;
+    }
+
+    .ticket_table td.bb {
+      border-bottom: 1px solid #e2ddd7;
+    }
+
+    .ticket-info summary::after {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-right: 2px solid #1e3932;
+      border-top: 2px solid #1e3932;
+      transform: rotate(135deg); /* ＞向きの角度 */
+      float: right;
+      margin-right: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .ticket-info details[open] summary::after {
+      transform: rotate(-45deg);
+    }
+
+    details .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    details[open] .content {
+      max-height: 500px; /* 適宜調整 */
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0; /* 透明 */
+        transform: translateY(-10px); /* 上から表示 */
+      }
+      100% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    }
+
+    details[open] summary {
+      color: #00754a;
+    }
