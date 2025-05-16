@@ -195,13 +195,14 @@
       justify-content: center;
       align-items: center;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
      /* 表示状態を管理 */
     .modal.show {
-      display: flex;
       opacity: 1;
+      visibility: visible;
     }
 
     .modal-content {
